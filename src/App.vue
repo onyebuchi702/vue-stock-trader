@@ -1,14 +1,15 @@
 <template>
-    <div class="container">
-
-    </div>
+  <div class="container">
+    <router-view></router-view>
+    <h1>App.vue file</h1>
+  </div>
 </template>
 
 <script>
 
-    export default {
+  export default {
 
-    }
+  }
 </script>
 
 <style>
