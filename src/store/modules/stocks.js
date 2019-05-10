@@ -9,7 +9,12 @@ const mutations = {
     state.stocks = stocks
   },
   'RND_STOCKS' (state) {
-
+    //recalcuating stock prices
+    // Math.round is to round up to whole Number
+    // Math.random is random numbers between 0 and 0.9999
+    state.stocks.forEach(stock => {
+      stock.price = Math.round(stock.price * (1 + Math.random() - 0.5))
+    })
   }
 };
 
@@ -21,7 +26,7 @@ const actions = {
     commit('SET_STOCKS', stocks)
   },
   randomizeStocks: ({commit}) => {
-    commit(RND_STOCKS)
+    commit('RND_STOCKS')
   }
 }
 
